@@ -18,6 +18,7 @@ DECORATION_LIST = [
     "logistic_regression",
     "micro_benchmarks",
     "poly",
+    "generated",
 ]
 
 
@@ -101,13 +102,13 @@ class Profiler:
                 #         else:
                 #             raise ValueError("unknown operation type")
                 #     stats.arch.op_list = []
-                
+
                 # print("current cache size", self.current_cache_size)
 
                 if self.stack:
                     self.stack[-1].stats = stats
                     self.data = self.stack.pop()
-                    assert(self.data is not None)
+                    assert self.data is not None
                 else:
                     raise ValueError("need stack by now")
 
