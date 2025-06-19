@@ -1,10 +1,8 @@
 from math import floor, ceil, sqrt
 
-import params
-from params import CacheStyle
-import poly
-import evaluator
-from perf_counter import PerfCounter
+from simfhe import params, evaluator, poly
+from simfhe.params import CacheStyle
+from simfhe.perf_counter import PerfCounter
 
 
 def fft_inner_hoisted_unrolled(

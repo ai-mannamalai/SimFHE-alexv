@@ -1,11 +1,9 @@
-from math import ceil, sqrt
-from os import stat
+from math import ceil
 
-import poly
-import params
-from params import CacheStyle
-from perf_counter import PerfCounter
-from profiler import Profiler
+import simfhe.poly as poly
+from simfhe import params
+from simfhe.params import CacheStyle
+from simfhe.perf_counter import PerfCounter
 
 """
 These operations are over cipehrtexts. The poly context inputs
@@ -76,7 +74,7 @@ def multiply_plain(
     stats.arch.min_bytes = 2 * int(ceil(poly_ctxt.logq / 8))
 
     for _ in range(2):
-        poly.mult(poly_ctxt, arch_params)
+        stats += poly.mult(poly_ctxt, arch_params)
 
     if wr_out:
         stats.arch.dram_limb_wr += 2 * poly_ctxt.size_in_bytes

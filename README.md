@@ -18,10 +18,10 @@ This, in turn, helps save significant design and development time.
 Moreover, the security level constraints limit the number of possible parameter sets, so the optimal parameter search takes only a few minutes.
 
 Organization of the Repo:
-1) params.py - Add/Modify all the architectural and scheme-related parameters in this file.
-2) perf_counter.py and profiler.py - These two scripts together account for the operation count and data transfers from main memory.
-3) experiment.py - Run this script to execute the various benchmarks. It imports params, perf_counter, and profiler.
-4) evaluator.py - Defines all primitive operations in the CKKS FHE scheme.
-5) poly.py - Defines all polynomial level operations such as poly add, mult, NTT, iNTT, and automorph.
+1) simfhe/params.py - Add/Modify all the architectural and scheme-related parameters in this file.
+2) simfhe/perf_counter.py and profiler.py - These two scripts together account for the operation count and data transfers from main memory.
+3) simfhe/experiment.py - Run this script to execute the various benchmarks. It imports params, perf_counter, and profiler.
+4) simfhe/evaluator.py - Defines all primitive operations in the CKKS FHE scheme.
+5) simfhe/poly.py - Defines all polynomial level operations such as poly add, mult, NTT, iNTT, and automorph.
 
 You will need Python3 or up to run various scripts in this repo.

@@ -1,5 +1,5 @@
-import params
-from perf_counter import PerfCounter
+from simfhe import params
+from simfhe.perf_counter import PerfCounter
 from math import ceil
 
 

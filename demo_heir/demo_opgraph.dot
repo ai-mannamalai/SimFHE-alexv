@@ -1,0 +1,71 @@
+digraph G {
+  compound = true;
+  subgraph cluster_1 {
+    v2 [label = " ", shape = plain];
+    label = "builtin.module : ()\l";
+    subgraph cluster_3 {
+      v4 [label = " ", shape = plain];
+      label = "";
+      subgraph cluster_5 {
+        v6 [label = " ", shape = plain];
+        label = "func.func : ()\lfunction_type: (!openfhe.crypto_con...\lsym_name: \"linear_polynomial\"\l";
+        subgraph cluster_7 {
+          v8 [label = " ", shape = plain];
+          label = "";
+          v9 [label = "<res_cc> %cc !openfhe.crypto_cont...", shape = Mrecord];
+          v10 [label = "<res_ct> %ct !lwe.new_lwe_ciphert...", shape = Mrecord];
+          v11 [label = "<res_ct_0> %ct_0 !lwe.new_lwe_ciphert...", shape = Mrecord];
+          v12 [label = "<res_ct_1> %ct_1 !lwe.new_lwe_ciphert...", shape = Mrecord];
+          v13 [label = "<res_ct_2> %ct_2 !lwe.new_lwe_ciphert...", shape = Mrecord];
+          v14 [fillcolor = "0.000000 0.3 0.95", label = "{{<arg_cc> %cc|<arg_ct> %ct|<arg_ct_1> %ct_1}|openfhe.mul_no_relin\l|{<res_ct_3> %ct_3 !lwe.new_lwe_ciphert...}}", shape = Mrecord, style = filled];
+          v15 [fillcolor = "0.111111 0.3 0.95", label = "{{<arg_cc> %cc|<arg_ct_3> %ct_3}|openfhe.relin\l|{<res_ct_4> %ct_4 !lwe.new_lwe_ciphert...}}", shape = Mrecord, style = filled];
+          v16 [fillcolor = "0.222222 0.3 0.95", label = "{{<arg_cc> %cc|<arg_ct_2> %ct_2|<arg_ct_4> %ct_4}|openfhe.sub\l|{<res_ct_5> %ct_5 !lwe.new_lwe_ciphert...}}", shape = Mrecord, style = filled];
+          v17 [fillcolor = "0.222222 0.3 0.95", label = "{{<arg_cc> %cc|<arg_ct_5> %ct_5|<arg_ct_0> %ct_0}|openfhe.sub\l|{<res_ct_6> %ct_6 !lwe.new_lwe_ciphert...}}", shape = Mrecord, style = filled];
+          v18 [fillcolor = "0.333333 0.3 0.95", label = "{{<arg_ct_6> %ct_6}|func.return\l}", shape = Mrecord, style = filled];
+        }
+      }
+      subgraph cluster_19 {
+        v20 [label = " ", shape = plain];
+        label = "func.func : ()\lfunction_type: () -\> !openfhe.crypt...\lsym_name: \"linear_polynomial__...\l";
+        subgraph cluster_21 {
+          v22 [label = " ", shape = plain];
+          label = "";
+          v23 [fillcolor = "0.555556 0.3 0.95", label = "{openfhe.gen_params\l\lbatchSize: 0 : i64\ldigitSize: 0 : i64\lencryptionTechniqueExtended: false\levalAddCount: 0 : i64\lfirstModSize: 0 : i64\linsecure: false\lkeySwitchCount: 0 : i64\lkeySwitchingTechniqueBV: false\lmaxRelinSkDeg: 0 : i64\lmulDepth: 0 : i64\lnumLargeDigits: 0 : i64\lplainMod: 65537 : i64\lringDim: 0 : i64\lscalingModSize: 0 : i64\lscalingTechniqueFixedManual: false\l|{<res_params> %params !openfhe.cc_params}}", shape = Mrecord, style = filled];
+          v24 [fillcolor = "0.666667 0.3 0.95", label = "{{<arg_params> %params}|openfhe.gen_context\l\lsupportFHE: false\l|{<res_cc> %cc !openfhe.crypto_cont...}}", shape = Mrecord, style = filled];
+          v25 [fillcolor = "0.333333 0.3 0.95", label = "{{<arg_cc> %cc}|func.return\l}", shape = Mrecord, style = filled];
+        }
+      }
+      subgraph cluster_26 {
+        v27 [label = " ", shape = plain];
+        label = "func.func : ()\lfunction_type: (!openfhe.crypto_con...\lsym_name: \"linear_polynomial__...\l";
+        subgraph cluster_28 {
+          v29 [label = " ", shape = plain];
+          label = "";
+          v30 [label = "<res_cc> %cc !openfhe.crypto_cont...", shape = Mrecord];
+          v31 [label = "<res_sk> %sk !openfhe.private_key", shape = Mrecord];
+          v32 [fillcolor = "0.777778 0.3 0.95", label = "{{<arg_cc> %cc|<arg_sk> %sk}|openfhe.gen_mulkey\l}", shape = Mrecord, style = filled];
+          v33 [fillcolor = "0.333333 0.3 0.95", label = "{{<arg_cc> %cc}|func.return\l}", shape = Mrecord, style = filled];
+        }
+      }
+    }
+  }
+  v9:res_cc:s -> v14:arg_cc:n[style = solid];
+  v10:res_ct:s -> v14:arg_ct:n[style = solid];
+  v12:res_ct_1:s -> v14:arg_ct_1:n[style = solid];
+  v9:res_cc:s -> v15:arg_cc:n[style = solid];
+  v14:res_ct_3:s -> v15:arg_ct_3:n[style = solid];
+  v9:res_cc:s -> v16:arg_cc:n[style = solid];
+  v13:res_ct_2:s -> v16:arg_ct_2:n[style = solid];
+  v15:res_ct_4:s -> v16:arg_ct_4:n[style = solid];
+  v9:res_cc:s -> v17:arg_cc:n[style = solid];
+  v16:res_ct_5:s -> v17:arg_ct_5:n[style = solid];
+  v11:res_ct_0:s -> v17:arg_ct_0:n[style = solid];
+  v17:res_ct_6:s -> v18:arg_ct_6:n[style = solid];
+  v23:res_params:s -> v24:arg_params:n[style = solid];
+  v24:res_cc:s -> v25:arg_cc:n[style = solid];
+  v30:res_cc:s -> v32:arg_cc:n[style = solid];
+  v31:res_sk:s -> v32:arg_sk:n[style = solid];
+  v30:res_cc:s -> v33:arg_cc:n[style = solid];
+}
+
+

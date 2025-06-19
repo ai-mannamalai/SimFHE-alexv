@@ -1,11 +1,10 @@
 from math import ceil, log2
 import logging
 
-from perf_counter import PerfCounter
-import evaluator
-import fft
-import eval_sine
-import params
+from .perf_counter import PerfCounter
+from . import evaluator
+from . import eval_sine
+from . import params, fft
 
 
 def conj_and_add(poly_ctxt: params.PolyContext, arch_params: params.ArchParam):

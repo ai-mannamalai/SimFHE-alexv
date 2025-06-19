@@ -1,11 +1,8 @@
 from math import ceil, log2
 
-import params
-from params import CacheStyle
-import poly
-import evaluator
-import bootstrap
-from perf_counter import PerfCounter
+from simfhe import params, bootstrap, evaluator, poly
+from simfhe.params import CacheStyle
+from simfhe.perf_counter import PerfCounter
 
 
 def rotate_sum(

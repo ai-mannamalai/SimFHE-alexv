@@ -5,20 +5,27 @@ import datetime
 from typing import List
 from dataclasses import dataclass, field
 import operator
-from params import SchemeParams
+from simfhe.params import SchemeParams
 
-import perf_counter
+from simfhe import perf_counter
+
+from simfhe import bootstrap, eval_sine, \
+    poly_eval, \
+    fft, \
+    evaluator, \
+    logistic_regression, \
+    micro_benchmarks, \
+    poly
 
 DECORATION_LIST = [
-    "bootstrap",
-    "eval_sine",
-    "poly_eval",
-    "fft",
-    "evaluator",
-    "logistic_regression",
-    "micro_benchmarks",
-    "poly",
-    "generated",
+    "simfhe.bootstrap",
+    "simfhe.eval_sine",
+    "simfhe.poly_eval",
+    "simfhe.fft",
+    "simfhe.evaluator",
+    "simfhe.logistic_regression",
+    "simfhe.micro_benchmarks",
+    "simfhe.poly",
 ]
 
 

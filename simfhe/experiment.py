@@ -1,13 +1,13 @@
-from math import ceil, exp, log
+from math import ceil
 from dataclasses import dataclass, field
-from typing import List, Dict
+from typing import List
 import csv
 import tqdm
 import tabulate
 
-import profiler
-import params
-import post_process
+import simfhe.profiler as profiler
+from simfhe import params
+import simfhe.post_process as post_process
 
 RPT_ATTR = {
     "total ops": "sw.total_ops",

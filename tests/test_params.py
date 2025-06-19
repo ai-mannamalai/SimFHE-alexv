@@ -1,4 +1,4 @@
-import params
+from simfhe import params
 
 
 def test_N():

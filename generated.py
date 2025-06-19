@@ -1,7 +1,6 @@
-import params
-import evaluator
-from perf_counter import PerfCounter
-from experiment import run_mutiple, print_table, Target
+from simfhe import params, evaluator
+from simfhe.perf_counter import PerfCounter
+from simfhe.experiment import run_mutiple, print_table, Target
 
 
 def test_ops(

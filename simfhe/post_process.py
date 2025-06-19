@@ -1,7 +1,7 @@
 import operator
 import subprocess
 
-import profiler
+import simfhe.profiler as profiler
 
 
 def accumulate(data):

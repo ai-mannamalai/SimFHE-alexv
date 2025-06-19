@@ -1,6 +1,5 @@
-from perf_counter import PerfCounter
-import params
-import evaluator
+from simfhe.perf_counter import PerfCounter
+from simfhe import params, evaluator
 
 
 def mod_up(poly_ctxt: params.PolyContext, scheme_params: params.SchemeParams):

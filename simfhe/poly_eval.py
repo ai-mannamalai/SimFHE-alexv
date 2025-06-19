@@ -1,9 +1,8 @@
 from math import ceil, log2
 import logging
 
-import params
-import evaluator
-from perf_counter import PerfCounter
+from simfhe import params, evaluator
+from simfhe.perf_counter import PerfCounter
 
 
 def baby_step_basis(

@@ -2,9 +2,7 @@
 Compute the sizes of various elements
 """
 
-from numpy import poly
-from evaluator import key_switch
-from params import SchemeParams, ArchParam, CacheStyle, FFTStyle, PolyContext
+from simfhe.params import SchemeParams, ArchParam, CacheStyle, FFTStyle
 
 logq = 50
 logN = 17
